@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+:root {
+    --client-color: rgb(62, 101, 2);
+    --owner-color: #f16868;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #04cccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    border-radius: 20px;
+    height: 80vh;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.55);
+    overflow: hidden;
+    position: relative;
+}
+
+h1 {
+    background-color: aqua;
+    text-transform: uppercase;
+    text-align: center;
+    height: 10%;
+    z-index: 2;
+}
+
+#buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    position: absolute;
+    bottom: 5px;
+}
+
+button {
+    border-radius: 50%;
+    border: none;
+}
+
+button i {
+    font-size: 30px;
+}
+
+input {
+    height: 30px;
+    border: none;
+    border-radius: 12px;
+    padding: 12px;
+    color: #1a1a1a;
+    outline: none;
+}
+
+#left i {
+    color: var(--client-color);
+}
+
+#right i {
+    color: var(--owner-color);
+}
+
+#chat {
+    display: flex;
+    width: 100%;
+    height: 80%;
+    flex-direction: column;
+    position: absolute;
+    bottom: 10%;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#chat > div {
+    border-radius: 6px;
+    padding: 4px;
+    margin: 4px;
+    max-width: 80%;
+    word-wrap: break-word;
+    font-size: 12px;
+}
+
+#client {
+    align-self: flex-start;
+    background-color: var(--client-color);
+}
+
+#owner {
+    align-self: flex-end;
+    background-color: var(--owner-color);
+}
